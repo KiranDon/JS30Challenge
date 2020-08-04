@@ -1,0 +1,49 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-image: url("bg/water.jpg");
+    background-size: cover;
+    color: white;
+    font-family: cursive;
+}
+.keys
+{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.key
+{
+    width: 80px;
+    height: 80px;
+    border: 3px solid rgb(174, 177, 150);
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+    transition: all 0.07s;
+}
+.playing
+{
+    transform: scale(1.1);
+    border: 3px solid rgb(238, 255, 0);
+    box-shadow: 2px 2px 5px black;
+}
+kbd
+{
+    font-size: 40px;
+}
+.audioName
+{
+    display: block;
+    color: rgb(251, 255, 0);
+    font-weight: bold;
+}
