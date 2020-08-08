@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>playing with css variables</title>
+</head>
+<body>
+    <h1>Let's Play With CSS Variables Using <span style="color: yellow;">JS</span></h1>
+    <div class="controls">
+        <label for="spacing">Spacing:</label>
+        <input type="range" name="spacing" min="10" max="100" data-size="px">
+
+        <label for="blur">Blur:</label>
+        <input type="range" name="blur" min="1" max="25" value="1" data-size="px">
+
+        <label for="baseColor">Base Color:</label>
+        <input type="color" name="baseColor" value="#FBFF00">
+    </div>
+    <div class="container">
+        <img src="images/leaf.jpg" >
+    </div>
+
+    <script type="text/javascript">
+    const inputs = document.querySelectorAll('.controls input');
+    function updateValues()
+    {
+        const suffix = this.dataset.size || '';
+        document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+    inputs.forEach(input => input.addEventListener('change', updateValues));
+    inputs.forEach(input => input.addEventListener('mousemove', updateValues));
+    </script>
+</body>
+</html>
