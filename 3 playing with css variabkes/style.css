@@ -1,6 +1,6 @@
 :root
 {
-    --padding: 10px;
+    --spacing: 20px;
     --blur: 1px;
     --baseColor: rgb(236, 236, 40);
 }
@@ -19,14 +19,29 @@ body
 }
 .container
 {
-    min-width: 200px;
     width: 500px;
     margin: 30px auto;
-    background-color: var(--baseColor);
-    padding: var(--padding);
 }
 .container img
 {
     width: 100%;
     filter: blur(var(--blur));
+    background-color: var(--baseColor);
+    padding: var(--spacing);
+}
+@media screen and (max-width: 560px)
+{
+    .container
+    {
+        width: 100%;
+        margin: 30px 0px;
+        position: fixed;
+        left: 0;
+    }
+    .controls
+    {
+        margin: 0px auto;
+        display: flex;
+        flex-direction: column;
+    }
 }
